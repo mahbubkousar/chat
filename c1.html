@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+body {
+box-sizing: border-box;margin:0;background:#323232;height:120%}
+  </style>
+  <body>
+  <script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+  if (event.target == modal) {
+  modal.style.display = "none";
+  }
+  }
+  </script>
+  <script>
+  know = {
+  "Hello" : "<le>hi</le>",
+  "I love you" : "<le> I love you too </le>",
+  "Do you love me?" : "<le>No </le>",
+  "" : "<le> Please write something</le>",
+  
+  };
+  function talk() {
+  var user = document.getElementById("userBox").value;
+  document.getElementById("userBox").value = "";
+  document.getElementById("chatLog").innerHTML +=user+"<br><br>";
+  if (user in know) {
+  document.getElementById("chatLog").innerHTML += know[user]+"<br>";
+  } else {
+  document.getElementById("chatLog").innerHTML += "<le>I don't understand...</le><br><br>";
+  }
+  } 
+  </script>
+  <div class="chat"><p id="chatLog"></p></div>
+  <br><br><div style="height:100px;position:sticky"></div>
+  <input id="userBox" class="input" placeholder="Write your message! " type="text" onkeydown="if (event.keyCode == 13) {talk()}">
+  
+  <style>
+ le
+ {
+  float:left;
+  text-align:left;
+  background:red;
+  border-radius :10px;
+  padding:3px 3px;
+  
+  background: linear-gradient(225deg, #D31027,#EA384D);
+  border-radius: 4px;
+  background: linear-gradient(225deg, #d33245, #fa3c52);
+  box-shadow:  -2px 2px 4px #831f2b, 
+  2px -2px 4px #ff516f;
+ }
+ .button1
+ {
+ height:40px;
+ weight:100px;
+ color:white;
+ background:darkblue;
+ border:none;
+ border-radius:20%;
+ }
+  .taab {
+  padding:10px 10px;
+  background: #F6EEC7;
+  position:sticky;
+  top:0;
+  }
+ .chat {
+  margin:7px;
+  margin-bottom:100px;
+  bottom:1000px;
+  postion:relative;
+  padding:10px 10px;
+  border-radius:2px;
+  }
+ .input 
+ {
+ width:70%;
+ border-radius: 20px;
+ height:40px;
+ font-size:20px;
+ color: #FFFFFF;
+ padding: 10px 10px;
+ position: sticky;
+ bottom:20px;
+ border:none;
+ pointer:cursor;
+ margin-left: 50px;
+ background: #5b728a;
+ box-shadow: inset 12px 12px 31px #425365, 
+ inset -12px -12px 31px #7491af;
+ }
+ input:hover {
+ border:none;
+ transform:scale(0.9);
+ 
+ }
+ #chatLog
+ {
+ font-size:20px;
+ width:90%;
+ float:right;
+ text-align:right;
+ padding:10px 10px;
+ border-radius: 13px;
+ margin:bottom:100px;
+ bottom:1000px;
+ color:#F1F2B5;
+ background: linear-gradient(to right,#2C3E50,#001510,black);
+ 
+ }
+  </style>
+  
+  
+  
+  
+  <style>
+  ::-webkit-input-placeholder { /* Edge */
+  color: white;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer */
+  color: white;
+  }
+  
+  ::placeholder {
+  color: white;
+  opacity:70%;
+  }
+  </style>
+  </body></html>
